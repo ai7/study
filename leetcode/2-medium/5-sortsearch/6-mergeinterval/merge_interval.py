@@ -22,6 +22,8 @@ class Solution:
         """
         return self.merge2(intervals)
 
+    # Note: sort interval by start, then merge/add successive ones.
+    
     # my solution, after optimization
     # still only beat 54.47%, hmmmmm
     def merge2(self, A):
