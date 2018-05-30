@@ -16,6 +16,17 @@ class ListNode:
 
 class Solution:
 
+    # Note: advance 2nd n-1 steps, then advance both til 2nd is last.
+    #
+    # advance second pointer n-1 steps ahead
+    # then advance both until second pointer is at last node.
+    # then delete node pointed by first pointer.
+    #   if first ptr is not head, return same head ptr
+    #   otherwise return head.next as new head ptr.
+    #
+    # another solution is to use a dummy head node to simplify cases,
+    # and keep first ptr at the node before the one we want to delete.
+
     def removeNthFromEnd(self, head, n):
         """
         :type head: ListNode
@@ -55,7 +66,8 @@ class Solution:
         # official solution calls for using a dummy node before head, to
         # save on corner cases, interesting...
 
-    # this is a bit tricky to understand, I don't quite like it, but the dummy idea is neat
+    # this is a bit tricky to understand, I don't quite like it, but
+    # the dummy idea is neat
     def remove2(self, head, n):
 
         # create dummy

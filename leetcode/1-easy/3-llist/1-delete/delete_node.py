@@ -14,6 +14,11 @@
 
 class Solution(object):
 
+    # Note: copy next value, and set next to next.next
+    #
+    # This works fine even if next node is end of list. If current
+    # node is end, then invalid question, can't delete.
+    
     # beats 38.43% of submissions
     def deleteNode(self, node):
         """

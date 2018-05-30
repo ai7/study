@@ -16,7 +16,15 @@ class ListNode:
 
 
 class Solution:
-    
+
+    # Note: use dummy node and merge whichever is smaller.
+    #
+    # create dummy node (so we return dummy.next at end)
+    # while l1 or l2:
+    #   if either have ended, attach the remain and done.
+    #   attach first of whichever list is smaller
+    #   advance curr and corresponding l1 or l2 pointer.
+
     def mergeTwoLists(self, l1, l2):
         """
         :type l1: ListNode

@@ -22,6 +22,14 @@ class Solution:
         """
         return self.reverse_recursive(head)
 
+    # Note: reverse 2nd+, then wire up first node.
+    #
+    # save second node
+    # recursively reverse second+ list -> assign to first
+    #   saved second node will be tail, so
+    #   second.next = head, head.next = None
+    # return first as head
+    
     def reverse_recursive(self, head):
 
         # if not head:  # if nothing, return nothing
@@ -49,6 +57,16 @@ class Solution:
         # head.next.next = head  # head.next points to last element, phew!
         # head.next = None
 
+    # Note: go through each and set curr.next = previous
+    #
+    # for each node:
+    #   save next node
+    #   set curr.next = prev node (None if first node)
+    #   then get ready for next round:
+    #     prev = curr
+    #     curr = next # saved next node
+    # return prev as new head
+        
     def reverse_iter(self, head):
 
         if not head or not head.next:

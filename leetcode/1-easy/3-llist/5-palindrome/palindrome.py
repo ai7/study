@@ -21,6 +21,11 @@ class Solution:
         """
         return self.check_via_stack(head)
 
+    # Note: check via stack
+    #
+    # for each item, push onto stack
+    # compare from head each element of stack
+    
     def check_via_stack(self, head):
 
         if not head or not head.next:

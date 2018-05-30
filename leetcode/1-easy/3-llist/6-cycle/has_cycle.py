@@ -14,6 +14,13 @@
 
 class Solution(object):
 
+    # Note: use slow/fast pointer
+    #
+    # while fast have 2 more nodes:
+    #   advance slow/fast pointer
+    #   if ever same, return True
+    # return False
+    
     def hasCycle(self, head):
         """
         :type head: ListNode
