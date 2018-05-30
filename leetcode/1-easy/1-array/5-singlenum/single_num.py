@@ -9,6 +9,8 @@
 
 class Solution:
 
+    # Note: XOR all the numbers together. Result is missing number.
+    
     def singleNumber(self, nums):
         """
         :type nums: List[int]

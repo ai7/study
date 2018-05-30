@@ -9,8 +9,10 @@
 
 class Solution:
 
+    # Note: add 1 to end until exhaust any carry.
+    #
     # start from last digit, add 1 and carry over until no carry over.
-    # if still carry over when end, prepend one
+    # if still carry over when end, prepend one.
     def plusOne(self, digits):
         """
         :type digits: List[int]

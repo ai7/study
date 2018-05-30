@@ -11,6 +11,11 @@
 
 class Solution:
 
+    # Note: simply the sum of all increasing pairs (differences).
+    #
+    # for each consecutive pair (i, j), if j > i, add differences to
+    # profit.
+    
     def maxProfit(self, prices):
         """
         :type prices: List[int]
@@ -19,15 +24,11 @@ class Solution:
         A = prices  # shorthand
         n = len(prices)
 
-        # find the longest decreasing sequence
-
         profit = 0
-        i = 1
-        while i < n:
-            diff = A[i] - A[i-1]
+        for i in range(1, n):  # from 2nd item to last
+            diff = A[i] - A[i-1]  # if greater than previous item
             if diff > 0:
-                profit += diff
-            i += 1
+                profit += diff  # accumulate difference
         return profit
 
     # 198 / 198 test cases passed.

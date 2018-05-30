@@ -9,6 +9,12 @@
 
 class Solution:
 
+    # Note: one pass hashtable solution.
+    #
+    # for each element
+    #   check if target - self is in hashtable.
+    #   if not: add self to table, value is index.
+
     # one pass hashtable, beats 100% of submissions, yeah!
     def twoSum(self, nums, target):
         """
@@ -28,3 +34,7 @@ class Solution:
             s[x] = i
 
         return []
+
+    # can't use sort array and 2 pointer from both end
+    # because we need to return index, not value, as sorting
+    # the array would mess up the index.

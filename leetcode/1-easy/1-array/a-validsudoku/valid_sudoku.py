@@ -9,6 +9,10 @@
 
 class Solution:
 
+    # Note: simply check all row/col/9-grid.
+    #
+    # a bit tedious, but not too complicated.
+    
     def isValidSudoku(self, board):
         """
         :type board: List[List[str]]

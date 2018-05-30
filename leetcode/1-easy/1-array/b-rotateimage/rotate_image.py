@@ -11,6 +11,13 @@ import unittest
 
 class Solution:
 
+    # Note: process image in layers from outer layer down to n/2.
+    #
+    # for each layer, use 'start' and 'end' variable.
+    #   for each individual row/column, use 'offset' variable
+    #
+    # the rest follows easily once we have these vars.
+
     # beats 97% of python submission
     def rotate(self, matrix):
         """

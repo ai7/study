@@ -10,6 +10,13 @@ import unittest
 
 class Solution:
 
+    # Note: sort 2 both array, then scan both and add common elements.
+    #
+    # while both have remain elements
+    #   if i == j: add to intersection
+    #   while i < j: i++
+    #   while i > j: j++
+    
     def intersect(self, nums1, nums2):
         """
         :type nums1: List[int]

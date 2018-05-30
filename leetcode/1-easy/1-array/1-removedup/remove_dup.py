@@ -9,8 +9,13 @@
 
 class Solution:
 
-    # the solution is to simply copy all unique chars (advance j
-    # pointer until it points to next distinct chars)
+    # Note: 2 pointer one pass copy solution.
+    #
+    # use 2 pointers. i, left side, target, and j, right side, source.
+    # advance j until next char is different (so j points to last
+    # occurrence of current char), then copy j to i. increment both i &
+    # j and repeat.
+    
     def removeDuplicates(self, nums):
         """
         :type nums: List[int]

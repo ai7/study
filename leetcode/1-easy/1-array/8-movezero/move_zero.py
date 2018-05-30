@@ -25,6 +25,34 @@ class Solution:
             return
         self.move3_sol3(A, n)
 
+    # Note: swap any non zero with end of non-zero sequence.
+    #
+    # for each element, if not zero:
+    #   swap with last non-zero-seq
+    #   non-zero-seq++
+    #
+    # it's miraculous that this works! it's also a tiny bit simpler
+    # than sol2. it's obvious that the non-zero-seq will all be >0,
+    # it's less obvious that any 0 in between would've been
+    # pushed/squeezed to the right side.
+
+    # beats 93%, damn (from solution 3, damn)
+    def move3_sol3(self, A, n):
+        lastNonZero = 0
+        for i in range(n):
+            if A[i]:  # if not, simply i++
+                # having an extra "if i != lastNonZero" for next line
+                # does not seem to change speed, still 93%
+                A[lastNonZero], A[i] = A[i], A[lastNonZero]
+                lastNonZero += 1
+
+    # Note: copy non-zero to end of non-zero seq, like qs partition.
+    #
+    # for each pos in array
+    #   if item not zero:
+    #     copy to end of non-zero pos; non_zero_pos++
+    # fill remaining A[non_zero_pos+1:] with 0
+
     # beats 92%, damn
     def move3_sol2(self, A, n):
         # from solution 2, damn
@@ -36,18 +64,6 @@ class Solution:
                 lastNonZero += 1
         for i in range(lastNonZero, n):  # fill last n with 0
             A[i] = 0
-
-    # beats 93%, damn
-    def move3_sol3(self, A, n):
-        # from solution 3, damn
-        # for every non-zero element, simply swap it with last non-zero seq
-        lastNonZero = 0
-        for i in range(n):
-            if A[i]:  # if not, simply i++
-                # having an extra "if i != lastNonZero" for next line
-                # does not seem to change speed, still 93%
-                A[lastNonZero], A[i] = A[i], A[lastNonZero]
-                lastNonZero += 1
 
 
 # my overly complicated solution, haha

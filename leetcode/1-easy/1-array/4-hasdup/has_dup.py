@@ -19,15 +19,17 @@ class Solution:
 
         return self.dup2(nums, len(nums))
 
+    # Note: convert to sets and compare length.
+
+    # trivial solution using sets.
+    # I suppose this works, since I see submissions like it
+    def dup2(self, A, n):
+        return len(set(A)) != len(A)
+
     # brute force, time limit exceeded
-    def dup1(self, A, n):
+    def dup(self, A, n):
         for i in range(n):
             for j in range(i, n):
                 if A[i] == A[j]:
                     return True
         return False
-
-    # trivial solution using sets
-    # I suppose this works, since I see submissions like it
-    def dup2(self, A, n):
-        return len(set(A)) != len(A)
