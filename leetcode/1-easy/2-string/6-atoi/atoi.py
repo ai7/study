@@ -8,6 +8,8 @@
 
 class Solution:
 
+    # Note: left to right, and *= 10 result each time.
+    
     def myAtoi(self, s):
         """
         :type s: str

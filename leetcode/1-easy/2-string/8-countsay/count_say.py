@@ -18,6 +18,16 @@ cache = {}
 
 
 class Solution:
+
+    # Note: send previous say output as input for next say.
+    #
+    # repeat n-1 times:  # first one is "1"
+    #   result = say_x(result)
+    #
+    # say_x() simply breaks result into groups of same chars, and
+    # process each group and add to result:
+    #   figure out length of group, convert len to string, write value
+    #   write single instance of char
     
     def countAndSay(self, n):
         """

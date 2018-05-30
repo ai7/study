@@ -11,6 +11,11 @@ import collections
 
 class Solution:
 
+    # Note: check sorted version or compare histogram.
+    #
+    # If anagram, then string sorted will be the same. Histogram if
+    # char counts will also be the same.
+    
     def isAnagram(self, s, t):
         """
         :type s: str

@@ -8,6 +8,12 @@
 
 
 class Solution:
+
+    # Note: simply check each possible substring.
+    #
+    # Some optimization with no needle or no haystack, or needle >
+    # haystack. and can check substr with python slicing and compare
+    # such as: haystack[i:i+len] == needle
     
     def strStr(self, haystack, needle):
         """

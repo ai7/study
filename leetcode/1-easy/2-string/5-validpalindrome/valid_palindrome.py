@@ -12,6 +12,11 @@ import unittest
 
 class Solution:
 
+    # Note: check if s is same as s[::-1] without case/symbols.
+    #
+    # build a new array from lowercase s, and with only alphanumeric
+    # chars. then see if array is same reversed.
+    
     def isPalindrome(self, s):
         """
         :type s: str

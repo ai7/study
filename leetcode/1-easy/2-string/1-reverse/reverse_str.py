@@ -9,6 +9,10 @@
 
 class Solution(object):
 
+    # Note: classic question. swap i/j from both end until meet.
+    #
+    # For python, slicing backward is a nice trick.
+    
     def reverseString(self, s):
         """
         :type s: str

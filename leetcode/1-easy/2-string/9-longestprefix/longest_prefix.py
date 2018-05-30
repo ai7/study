@@ -9,6 +9,16 @@ import unittest
 
 
 class Solution:
+
+    # Note: use zip to process strs in parallel
+    #
+    # convert each to set, if same char, set len will be 1. if so,
+    # append to prefix output.
+    #
+    # zip() will nicely terminate when one string is exhausted.
+    #
+    # remember to send input to zip() as *data, not just data, so
+    # input will be expanded to each parameter.
     
     def longestCommonPrefix(self, strs):
         """

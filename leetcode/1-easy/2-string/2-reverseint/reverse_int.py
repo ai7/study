@@ -8,6 +8,8 @@
 
 class Solution:
 
+    # Note: convert to string, reverse string and track signs.
+    
     def reverse(self, x):
         """
         :type x: int
