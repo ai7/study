@@ -1,4 +1,5 @@
 # https://leetcode.com/explore/interview/card/top-interview-questions-medium/111/dynamic-programming/810/
+# https://leetcode.com/problems/longest-increasing-subsequence/solution/
 
 # Longest Increasing Subsequence
 #
@@ -45,7 +46,7 @@ class Solution:
         same as bisect.bisect_left()
         """
         while low <= high:  # <= (not <) since need to search size 1 seq
-            m = low + (high-low)/2
+            m = low + (high-low) // 2
             if A[m] == x:  # if match, done
                 return m
             elif A[m] < x:  # smaller, search right half
@@ -54,18 +55,33 @@ class Solution:
                 high = m - 1
         return low
 
-    # O(n^2) solution, based on youtube video
+    # Note: O(n^2) solution, based on youtube video and solution.
     #
+    # dp[n] tracks the longest increasing subsequence ending at that
+    # position. for each pos, scan all previous loc and +1 for any
+    # index that is smaller than current, take max and assign to
+    # dp[n]. repeat for next pos.
+    #
+    # initialize an array (size n) with 1 (smallest subseq is 1)
+    # for each element in 2nd position to last  (a[i])
+    #   compare A[i] with each of A[0:i]  (a[j])
+    #     if a[i] is bigger than a[j]
+    #       take dp[j] and +1, track a max of these
+    #   dp[i] = max of above value
+    
     # 21 / 24 test cases passed.
     # time limit exceeded, hehe.
     def lis1(self, A):
         """Assume more than 1 elements"""
         n = len(A)
-        T = [1] * n
+        dp = [1] * n
         longest = 1
-        for i in range(1, n):
-            for j in range(0, i):
-                if A[j] < A[i]:
-                    T[i] = max(T[i], T[j] + 1)
-                    longest = max(longest, T[i])
+        for i in range(1, n):  # for each pos from [1...n)
+            maxval = 0
+            for j in range(0, i):  # for each previous location
+                if A[j] < A[i]:  # if current is larger than it
+                    maxval = max(maxval, dp[j])  # update local max
+            dp[i] = maxval + 1  # set dp value now
+            longest = max(longest, dp[i])  # update longest if needed
+
         return longest
