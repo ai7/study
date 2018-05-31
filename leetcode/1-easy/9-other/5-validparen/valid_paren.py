@@ -11,6 +11,12 @@ import unittest
 
 class Solution:
 
+    # Note: use stack and push in the expected close paren.
+    #
+    # for each open paren, push to stack corresponding close paren. If
+    # encounter a close paren that doesn't match top of stack, error.
+    # at the end, stack should be empty.
+    
     # 76 / 76 test cases passed.
     # Status: Accepted
     # Runtime: 40 ms (beats 90.78% py3)

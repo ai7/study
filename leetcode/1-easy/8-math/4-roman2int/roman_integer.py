@@ -28,7 +28,12 @@ ROMAN = {
 
 
 class Solution:
-    
+
+    # Note: check special combo, then regular search
+    #
+    # For each position, first check double digit combo, if so,
+    # consume 2 chars. If not, use as single chars.
+
     def romanToInt(self, s):
         """
         :type s: str

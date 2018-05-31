@@ -11,7 +11,15 @@ import pprint
 
 
 class Solution:
-    
+
+    # Note: 1 for 1st/last, and sum for every pair in previous.
+    #
+    # for each row
+    #   first add '1'
+    #   then for each pair in previous row
+    #     add sum of said pair
+    #   finally add '1' (and add array to answer)
+
     def generate(self, numRows):
         """
         :type numRows: int

@@ -9,6 +9,11 @@
 
 class Solution:
 
+    # Note: mathematical or bit trick solution
+    #
+    # Math: n * (n+1) / 2 - sum(nums)
+    # Bit: xor num and its position. result is missing number.
+
     # 122 / 122 test cases passed.
     # Status: Accepted
     # Runtie: 44 ms (beats 99.54% of py3)
@@ -20,7 +25,6 @@ class Solution:
         n = len(nums)
         t = int((n * (n + 1)) / 2)
         return t - sum(nums)
-
 
     # neat bit trick from solution.
     #

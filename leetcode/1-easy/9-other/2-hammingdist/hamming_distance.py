@@ -11,6 +11,10 @@
 
 class Solution(object):
 
+    # Note: count the number of bits in x XOR y
+    #
+    # XOR returns 0 if bits are same, 1 if differ.
+    
     def hammingDistance(self, x, y):
         """
         :type x: int
