@@ -24,6 +24,18 @@ class Solution:
         # return self.depth2(root)
         return self.depth_iter(root)
 
+    # Note: track max depth while doing a walk of tree
+    #
+    # 2. preorder walk and simply return max of left/right children
+    #    +1. This is simpler to get correct.
+    #
+    # 1. preorder walk and pass depth+1 down the chain. return max of
+    #    left/right back up the chain.
+    #
+    # 3. iterative POST-ORDER walk, and track maximum stack length
+    #    (post-order since we need current node on stack before we
+    #    branch to right side).
+    
     # what I came up with, passing depth down
     # 39 / 39 test cases passed.
     # beats 95.78%

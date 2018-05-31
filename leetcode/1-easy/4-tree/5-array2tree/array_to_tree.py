@@ -17,6 +17,14 @@ class TreeNode:
 
 class Solution:
 
+    # Note: start with middle, and recursively build left/right tree
+    #
+    # pick middle of array and create Node x, then recursively build
+    # left child with array items to the left, and right child with
+    # array items to the right.
+    #
+    # special case 0, 1, 2 elements for speed.
+    
     def sortedArrayToBST(self, nums):
         """
         :type nums: List[int]

@@ -15,6 +15,8 @@
 
 
 class Solution:
+
+    # Note: walk tree and pass level down, add to A[level].
     
     def levelOrder(self, root):
         """

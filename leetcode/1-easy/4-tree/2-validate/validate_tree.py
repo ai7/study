@@ -17,6 +17,14 @@ import sys
 
 class Solution:
 
+    # Note: use helper function that takes min/max as parameter.
+    #
+    # validate x.val is within min/max
+    # recursively validate x.left in (min, x.val)
+    # recursively validate x.right in (x.val, max)
+    # return false if any above is false
+    # return true at very end
+    
     def isValidBST(self, root):
         """
         :type root: TreeNode

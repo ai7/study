@@ -31,7 +31,7 @@ class TreeNode:
 
 
 class Solution:
-    
+
     def isSymmetric(self, root):
         """
         :type root: TreeNode
@@ -39,6 +39,15 @@ class Solution:
         """
         # return self.is_mirror(root, root)
         return self.is_mirror_iter(root)
+
+    # Note: recursive solution, simple, but tricky to come up with.
+    #
+    # this helper function takes 2 node as input
+    # - check null status matches
+    # - check .val matches
+    # - recursively check t1.left == t2.right, and t1.right == t2.left
+    #
+    # and finally start with is_mirror(root, root), a nice trick.
 
     def is_mirror(self, t1, t2):
 
@@ -54,8 +63,13 @@ class Solution:
         # 193 / 193 test cases passed.
         # beats 97.77% of py3 submissions
 
-    # the key idea is to add 2 things at a time to the queue,
-    # starting with the root.
+    # Note: iterative solution, add/pop 2 things at a time in Q.
+    #
+    # start with [root, root] on stack.
+    # each time, pop 2 items off stack.
+    #   compare item null status and value, same as recursive version.
+    #   then add 1.left and 2.right as a set, and
+    #            1.right and 2.left as another set
     def is_mirror_iter(self, root):
         q = collections.deque()
         q.append(root)
