@@ -24,6 +24,12 @@ class Solution(object):
         """
         return self.search(1, n+1)
 
+    # Note: non symmetrical binary search
+    #
+    # if middle is bad, check left half
+    #   if none, return middle, otherwise return left search result.
+    # if middle is not bad, recurse on right half
+    
     # s: starting pos
     # e: ending pos+1 (easier if using python slicing notation)
     def search(self, s, e):

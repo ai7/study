@@ -8,6 +8,17 @@
 
 
 class Solution:
+
+    # Note: copy larger of A1 or A2 from the end
+    #
+    # - first some special checks
+    #   no input, 2nd array is empty
+    #   if 1st empty, just copy 2nd, done
+    #
+    # - copy larger of A1/A2 elements to target until one array is
+    #   exhausted.
+    # - if 2nd array exhausted, done
+    # - if 1st array exhausted, copy remain 2nd array items
     
     def merge(self, nums1, m, nums2, n):
         """
