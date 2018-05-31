@@ -28,6 +28,11 @@ class Solution:
         """
         return self.save
 
+    # Note: swap A[i] with random element of A[i:n+1].
+    #
+    # Go through array, for each position i, swap A[i] with random
+    # element from this point forward. Could be i itself.
+
     def shuffle(self):
         """
         Returns a random shuffling of the array.

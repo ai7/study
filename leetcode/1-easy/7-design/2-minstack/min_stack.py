@@ -23,6 +23,13 @@ class MinStack:
         self.stack = []
         self.min_s = []
 
+    # Note: use a 2nd stack to track the min elements so far.
+    #
+    # For 2nd stack, push to stack if not greater than top of stack.
+    # This allows duplicate elements handling.
+    #
+    # For pop(), remove from 2nd stack if matching value.
+
     def push(self, x):
         """
         :type x: int
