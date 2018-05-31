@@ -20,6 +20,15 @@ class Solution:
         """
         return self.climb2(n)
 
+    # Note: basically f(n) = f(n-1) + f(n-2)
+    #
+    # basically top of stair can be reached from 1 or 2 steps away, so
+    # answer is simply sum of 1-away result and 2-away result. This is
+    # precisely f(n-1) and f(n-2), which is basically the fib number.
+    #
+    # for recursive solution, remember we return 1 when we are down to
+    # 0 step, this simplifies logic (vs if we +1 to recursion result).
+    
     # nice way to calculate fib number
     def climb3(self, n):
         a = b = 1

@@ -30,6 +30,19 @@ class Solution:
         # return self.rob_memorize(nums)
         return self.rob_dp2(nums)
 
+    # Note: max of 2 cases (rob this one, or rob next one)
+    #
+    # Go through array, and compute the max of 2 cases:
+    # - rob this house + recurse on 2 houses down to end.
+    # - recurse on the next house (don't rob current house)
+    #
+    # For bottom up dp, mainly recognize this is:
+    #   f(k) = max( A[k] + f(k-2), f(k-1) )
+    # so just start from 3rd element and apply this formula.
+    #
+    # dp is easier to visualize with a result array, but can be done
+    # without creating an array (using 3 variables, a, b, c).
+    
     # recursive with memorization
     def rob_memorize(self, A):
 

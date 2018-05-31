@@ -9,6 +9,11 @@
 
 
 class Solution:
+
+    # Note: at each step, check max subarray ending at A[i]
+    #
+    # this is either just A[i], or prev max + A[i]
+    # also update global max at the same time.
     
     def maxSubArray(self, nums):
         """

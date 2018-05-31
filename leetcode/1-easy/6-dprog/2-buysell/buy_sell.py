@@ -12,6 +12,11 @@
 
 
 class Solution:
+
+    # Note: track lowest price and best deal at each step.
+    #
+    # if x > low, update best deal if higher
+    # if x < low, update low
     
     def maxProfit(self, prices):
         """
