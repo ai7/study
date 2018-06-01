@@ -12,7 +12,7 @@ import unittest
 
 
 class Solution:
-    
+
     def exist(self, board, word):
         """
         :type board: List[List[str]]
@@ -21,11 +21,13 @@ class Solution:
         """
         return self.my_search(board, word)
 
-    # Note: run dfs on all matching 1st chars in board. in dfs, check
-    #   whether char is a match or not, if so, recurse on all 4
-    #   neighbors (clear char at current board position before
-    #   recursive dfs() call, and restore char after all 4 calls).
-    
+    # Note: run dfs on all matching 1st chars in board.
+    #
+    # in dfs, check whether current char is a match or not against the
+    # current position in search word, if so, recurse on all 4
+    # neighbors (clear char at current board position before recursive
+    # dfs() call, and restore char after all 4 calls).
+
     # 87 / 87 test cases passed.
     # Status: Accepted (on 1st submit, yeah!)
     # Runtime: 260 ms

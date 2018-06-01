@@ -20,6 +20,14 @@ class ListNode:
 
 class Solution:
 
+    # Note: add nodes in parallel and don't forget carry
+    #
+    # since nodes are stored in reverse digit order, we can simply
+    # process them in order, and add the pairs including any carry
+    # digit.
+    #
+    # use dummy node so we can return dummy.next as result.
+
     # 1562 / 1562 test cases passed.
     # Status: Accepted
     # Runtime: 120 ms (beats 81.07% py3)

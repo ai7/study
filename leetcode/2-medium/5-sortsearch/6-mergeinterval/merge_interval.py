@@ -22,7 +22,12 @@ class Solution:
         """
         return self.merge2(intervals)
 
-    # Note: sort interval by start, then merge/add successive ones.
+    # Note: sort interval, grow or add successive intervals.
+    #
+    # first sort interval by starting point.
+    # then for each interval b in input A[1:]
+    #   grow last interval if b overlap with last one
+    #   add b as new interval if does not overlap.
     
     # my solution, after optimization
     # still only beat 54.47%, hmmmmm

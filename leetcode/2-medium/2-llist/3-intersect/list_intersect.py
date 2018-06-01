@@ -18,6 +18,12 @@ class ListNode(object):
 
 class Solution(object):
 
+    # Note: find length difference, then set 2nd pointer diff ahead.
+    #
+    # find length of both list (and test if end is same)
+    # then advance p1 (for longer list) by their difference
+    # then advance both until they meet (point to same)
+
     # 42 / 42 test cases passed.
     # Status: Accepted
     # Runtime: 349 ms (beats 91.75% py3, yeah)

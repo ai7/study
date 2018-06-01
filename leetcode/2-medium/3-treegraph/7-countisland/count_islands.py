@@ -20,6 +20,18 @@ class Solution:
         """
         return self.check_island(grid)
 
+    # Note: number of BFS runs is the number of islands in grid.
+    #
+    # - go through matrix, and build a graph as simple set of (x,y)
+    #   coordinates (that have matrix value '1').
+    # - then run DFS on graph set (no need to build neighbor list
+    #   since we know what the neighbors are).
+    # - number of island is number of DFS run we do at top level.
+    #
+    # This is a read-only solution that don't touch input data.
+    # Alternatively, we can run BFS directly on matrix by marking
+    # visited node.
+
     # 47 / 47 test cases passed.
     # Status: Accepted
     # Runtime: 124 ms (beats 26.50% of py3)
@@ -50,8 +62,8 @@ class Solution:
 
         return count
 
-    # this is iterative dfs, easy
-    # maybe recursive would be faster
+    # this is recursive dfs, easy
+    # maybe iterative would be faster?
     def dfs2(self, x, nodes, rows, cols):
 
         # visit this node, which is basically remove it from graph

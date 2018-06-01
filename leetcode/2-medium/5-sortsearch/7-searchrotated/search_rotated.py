@@ -13,7 +13,7 @@ import unittest
 
 
 class Solution:
-    
+
     def search(self, nums, target):
         """
         :type nums: List[int]
@@ -22,10 +22,14 @@ class Solution:
         """
         return self.my_search2(nums, target)
 
-    # Note: when array is rotated, we have a good half, and a bad
-    #   half. Modified binary search checks if k is in range of the
-    #   good half, if so, search the good half, otherwise, search the
-    #   other half.
+    # Note: binary search and track which side is good.
+    #
+    # when array is rotated, we have a good half, and a bad half. bad
+    # half is where rotation occurred.
+    #
+    # Modify binary search to check if k is within range of the good
+    # half, if so, search the good half, otherwise, search the other
+    # half.
 
     # same as 1, but no special/regular search.
     # 196 / 196 test cases passed.

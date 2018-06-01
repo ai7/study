@@ -10,6 +10,11 @@ import collections
 
 class Solution:
 
+    # Note: use sorted string as keys for dict.
+    #
+    # Store the word itself as elements of a list in each location in
+    # dictionary. Anagrams will naturally map to the same key.
+
     # 101 / 101 test cases passed.
     # Status: Accepted
     # Runtime: 152 ms (beat 44.48% py3)

@@ -35,11 +35,17 @@ class Solution:
         return self.combo1(digits)
         # return self.combo2(digits)
 
-    # Note: use simple backtrack. for each possible char for digit,
-    #   generate a subproblem by adding char to path, and recurse on
-    #   remaining digits. When no more digits, add path to result.
-        
-    # cleaner dfs using inner function from discussion
+    # Note: use backtrack with current path as parameter.
+    #
+    # use simple backtrack. for each possible char for digit, generate
+    # a subproblem by adding char to path, and recurse on remaining
+    # digits. When no more digits, add current path to result as one
+    # possible answer.
+    #
+    # at each step, branch factor is the number of chars for that
+    # digit.
+
+    # cleaner dfs using inner function from discussion.
     # dfs() don't need to take on so many parameters,
     # just the ones that change from level to level.
     def combo2(self, digits):
@@ -56,7 +62,8 @@ class Solution:
             dfs('', 0)
         return res
 
-    # my version, made into inner function later
+    # my version, made into inner function later. Similar to above but
+    # input changes rather than taking an index as parameter.
     #
     # 25 / 25 test cases passed.
     # Status: Accepted

@@ -19,10 +19,17 @@ class Solution:
         # return self.build_powerset(nums)
         return self.build_powerset2(nums)
 
-    # Note: start with the empty set [], for each item in input array,
-    #   add to all items in previous powerset. Repeat for next item.
-    #   Total 2^n items in powerset for n items (since each time it
-    #   doubles).
+    # Note: add new item to every item in set, repeat for next item.
+    #
+    # start with the empty set []
+    # for each item in input array
+    #   create new set by add this item to all items in previous set.
+    #   Repeat for next item.
+    #
+    # number of items basically doubles for each round, for a total of
+    # 2^n items in the powerset for n items.
+    #
+    # can also be built using bit masks, see below.
     
     # 10 / 10 test cases passed.
     # Status: Accepted
@@ -44,16 +51,18 @@ class Solution:
         #     res += [item + [num] for item in res]
         # return res
 
-    # Note: powerset can also be built using bit masks. For n items,
-    #   the powerset can be simply viewed as all unique sequences of
-    #   selections (of size n). ie, ([no, no], [no, yes], [yes, no],
-    #   [yes, yes]) where yes/no indicates whether nth item is in the
-    #   list or not.
+    # Note: iterate through 0...2^n, and create set based on bits.
     #
-    #   This means we can also build the powerset by iterate through
-    #   all the numbers between 0 to 2^n (for n items), and using the
-    #   number's binary representation to select whether an item is in
-    #   it or not.
+    # powerset can also be built using bit masks. For n items, the
+    # powerset can be simply viewed as all unique sequences of
+    # selections (of size n). ie, ([no, no], [no, yes], [yes, no],
+    # [yes, yes]) where yes/no indicates whether nth item is in the
+    # list or not.
+    #
+    # This means we can also build the powerset by iterate through all
+    # the numbers between 0 to 2^n (for n items), and using the
+    # number's binary representation to select whether an item x is in
+    # the set's specific item instance y or not.
     def build_powerset2(self, A):
 
         def map_to_set(k):  # map integer k to a set of elements

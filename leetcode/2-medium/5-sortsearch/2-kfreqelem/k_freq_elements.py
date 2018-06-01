@@ -20,6 +20,16 @@ class Solution:
         """
         return self.top_freq2(nums, k)
 
+    # Note: create counter, and sort/return first k elements
+    #
+    # We can create a counter manually using a dict. The trick is to
+    # get a sorted view of the data. For that, we can do
+    #   sorted(freq, key=freq.get)
+    # basically using the value of dict as sorting key.
+    # finally return the first k elements using slice.
+    #
+    # alternatively, we can just do collections.Counter(A) and call
+    # the most_common(k) function on the resulting data.
     def top_freq2(self, A, k):
 
         freq = collections.defaultdict(int)

@@ -18,6 +18,23 @@ class Solution:
         """
         return self.substr2(s)
 
+    # Note: use dict to track each char and its most recent index.
+    #
+    # For each char
+    #   if in dict (is a repeat), and repeat position is after my
+    #   current substring's starting position
+    #     reset start to repeat position + 1
+    #   else (not repeat), extend length
+    #     update max length
+    #   update char position in dict (always)
+    #
+    # This is a bit tricky to understand but easier to get right and
+    # simpler.
+    #
+    # Alternatively, we can keep track of a sliding window of
+    # histograms as we go down the list. When we find a repeat, delete
+    # chars from histogram as needed. This is my substr2() below.
+
     # similar to my substr2 below, but simplified/optimized further, as we
     # don't need to delete hashmap, we can check whether i's position
     # is before or after the duplicate position, hmmmm.

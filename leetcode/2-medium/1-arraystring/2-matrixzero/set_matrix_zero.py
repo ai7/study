@@ -9,6 +9,15 @@
 
 class Solution:
 
+    # Note: use first row & column as flags for clear rows/columns
+    #
+    # first use 2 separate vars to track if row0/col0 contains 0.
+    # then scan matrix and set row0/col0 flag to 0 as needed.
+    # then go through row0/col0 and clear corresponding row/column.
+    # finally clear row0/col0 based on 2 vars saved earlier.
+    #
+    # remember to use helper function to clear row/column.
+    
     # 159 / 159 test cases passed.
     # Status: Accepted
     # Runtime: 100 ms (beats 96.64% of py3)

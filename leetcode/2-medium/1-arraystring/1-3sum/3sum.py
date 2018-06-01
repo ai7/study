@@ -20,6 +20,22 @@ class Solution:
         """
         return self.three_sum3(nums)
 
+    # Note: for each num, do 2sum (from left/right) for remaining data.
+    #
+    # - sort A first
+    # - for each starting position i, do 2sum 2 pointer (left/right)
+    #   search from i+1 to end of array.
+    # - since array is sorted, we can do the 2sum in O(n) time by
+    #   scanning left/right to the center until they meet.
+    #     left++ if 3sum is < target
+    #     right-- if 3sum is > target
+    #     if equal, add result, and skip any left/right that are the same.
+    # - no need to use a set/etc to track the return result, if we can
+    #   ensure we only add unique data.
+    #
+    # Don't need to search prior to i, since any found match would've
+    # been found earlier (when i was at that position).
+
     # based on a guy's java solution, damn it damn it damn it!
     # more optimized/easier to read based on a python guy's post.
     #
@@ -29,10 +45,6 @@ class Solution:
     # Runtime: 1076 ms (beats 40.01% of py3)
     # Runtime: 1004 ms (beats 48.81% of py3)
     def three_sum3(self, A):
-        # for each starting position i, do 2sum 2 pointer (left/right) search from i+1
-        # since array is sorted, we can do the 2sum in O(n) time by scanning left/right
-        # to the center until they meet. Also no need to use a set/etc to track the return
-        # result, if we can ensure we only add unique data.
         n = len(A)
         A.sort()
         res = []

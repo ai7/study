@@ -31,6 +31,12 @@ class Solution:
         """
         return self.k_largest(nums, k)
 
+    # Note: order selection using quicksort partition.
+    #
+    # order statistics, similar to quicksort, but only recurse down
+    # one half, not both. this results in O(n) instead of O(n log n)
+    # time.
+    
     # 32 / 32 test cases passed.
     # Status: Accepted
     # Runtime: 3036 ms (beats 3.34% py3, what?)
@@ -75,9 +81,6 @@ class Solution:
         return i + 1            # return index to pivot
 
     # select kth element in A[i...j]
-    # order statistics, similar to quicksort, but only recurse down
-    # one half, not both. this results in O(n) instead of O(n log n)
-    # time.
     def order_statistics(self, A, i, j, k):
         """select kth (1...n) elem from A[i:j)"""
 

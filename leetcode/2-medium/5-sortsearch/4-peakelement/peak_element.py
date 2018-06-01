@@ -16,7 +16,15 @@
 # binary search simply picks a half based on this.
 
 class Solution:
-    
+
+    # Note: binary search and go left/right depend on slope
+    #
+    # on rising slope, go right.
+    # on falling slope, go left.
+    # when we reach single element, done.
+    #
+    # This is assuming both array extremes are -inf.
+
     def findPeakElement(self, nums):
         """
         :type nums: List[int]

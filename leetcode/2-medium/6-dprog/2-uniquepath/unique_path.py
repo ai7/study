@@ -39,7 +39,7 @@ class Solution:
         pass
 
 
-    # standard memorization
+    # Note: standard memorization
 
     # 62 / 62 test cases passed.
     # Status: Accepted (on 1st submit!)
@@ -54,7 +54,7 @@ class Solution:
             if right <= 1 or down <= 1:  # if only one row/column left, done
                 return 1
 
-            return search(right - 1, down) + search(right, down - 1)  # 2 path
+            return search(right - 1, down) + search(right, down - 1)  # 2 options
 
         return search(right, down)
 

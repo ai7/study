@@ -10,7 +10,7 @@ import unittest
 
 
 class Solution:
-    
+
     def generateParenthesis(self, n):
         """
         :type n: int
@@ -18,14 +18,16 @@ class Solution:
         """
         return self.gen_paren1(n)
 
-    # Note: recursively explore path, keep track of number of open and
-    #   close parens left.
-    #   - if no open and close paren left, done, add path as result
-    #   - if no open paren, add all close paren to path and done.
-    #   - if no close paren (but have open), use open and recurse on
-    #     open-1 and close+1.
-    #   - if both open/close available, recurse on booth
-    
+    # Note: track number of open/close parens available in each call.
+    #
+    # use backtrack and recursively explore path, keep track of number
+    # of open and close parens left.
+    # - if no open and close paren left, done, add path as result
+    # - if no open paren, add all close paren to path and done.
+    # - if no close paren (but have open), use open and recurse on
+    #   open-1 and close+1.
+    # - if both open/close available, recurse on both
+
     # my solution, getting use to using inner functions!
     #
     # 8 / 8 test cases passed.

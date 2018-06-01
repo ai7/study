@@ -13,7 +13,7 @@ import unittest
 
 
 class Solution:
-    
+
     def canJump(self, nums):
         """
         :type nums: List[int]
@@ -21,12 +21,13 @@ class Solution:
         """
         return self.my_jump3(nums)
 
-    # Note: keep track of earliest success position for each index.
-    #   Scan backwards from end, at each position, see if pos+jump can
-    #   reach the last success position. If so, update earliest to
-    #   current pos. At the end, check if last_good is 0.
+    # Note: can we jump to the last success position from here?
     #
-    #   Figured out all these by myself, yeah. ;)
+    # Scan backwards from end, at each position, see if pos+jump can
+    # reach the last success position. If so, update last successful
+    # position to current pos. At the end, check if last_good is 0.
+    #
+    # Figured out all these by myself, yeah. ;)
 
     # 75 / 75 test cases passed.
     # Status: Accepted
@@ -44,13 +45,14 @@ class Solution:
         return last_good == 0  # is starting position a success?
 
     # Note: use an array to keep track of earliest success position
-    #   for each index. Scan backwards from end, at each position, see
-    #   if pos+jump can reach the last success position. If so,
-    #   current pos is success, otherwise, re-use previous
-    #   last-succcess position in current position.
     #
-    #   Probably don't need an array, as we simply need to track a
-    #   value..
+    # for each index. Scan backwards from end, at each position, see
+    # if pos+jump can reach the last success position. If so, current
+    # pos is success, otherwise, re-use previous last-succcess
+    # position in current position.
+    #
+    # Probably don't need an array, as we simply need to track a
+    # value..
 
     # start from end, goes backward, proper dynamic programming?
     # 75 / 75 test cases passed.

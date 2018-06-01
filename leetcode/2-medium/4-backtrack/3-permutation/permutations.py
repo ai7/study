@@ -10,7 +10,7 @@ import unittest
 
 
 class Solution:
-    
+
     def permute(self, nums):
         """
         :type nums: List[int]
@@ -18,11 +18,14 @@ class Solution:
         """
         return self.gen_permute(nums)
 
-    # Note: backtrack, for each item in array, create a subproblem by
-    #   add item to path, and recurse on array without this item. when
-    #   array have been exhausted, add path to result. branch factor
-    #   at each step is length of array at that step.
-    
+    # Note: pick item and add to path, and recurse on remaining items.
+    #
+    # for each item in array, create a sub problem by add item to
+    # path, and recurse on rest of array without this item. When array
+    # have been exhausted, add path to result.
+    #
+    # branch factor at each step is length of array at that step.
+
     # 25 / 25 test cases passed.
     # Status: Accepted (on 1st submit, yeah)
     # Runtime: 52 ms (beats 97.59% 10am)

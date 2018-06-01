@@ -19,6 +19,17 @@ class ListNode:
 
 class Solution:
 
+    # Note: split into odd/even list, then stitch together.
+    #
+    # For each item in input list:
+    #   save next node (for next round)
+    #   disconnect next node (from current)
+    #   add current to even/odd list depend on counter
+    #     and advance those list
+    # then stitch together the 2 list at the end
+    #
+    # Use dummy node and return odd dummy node.next
+
     # 70 / 70 test cases passed.
     # Status: Accepted
     # Runtime: 56 ms (beat 80.26% of py3)

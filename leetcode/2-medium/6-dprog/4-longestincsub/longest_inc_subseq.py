@@ -21,6 +21,8 @@ class Solution:
             return 1
         return self.lis2(nums)
 
+    # Note: replace in tail if smaller, or extend tail if larger.
+    #
     # hard to understand algorithm from discussion, god damn it.
     # simplified further based on py posts
     #
@@ -55,12 +57,18 @@ class Solution:
                 high = m - 1
         return low
 
-    # Note: O(n^2) solution, based on youtube video and solution.
+    # Note: dp[n] tracks LIS ending at this position.
     #
-    # dp[n] tracks the longest increasing subsequence ending at that
-    # position. for each pos, scan all previous loc and +1 for any
-    # index that is smaller than current, take max and assign to
-    # dp[n]. repeat for next pos.
+    # O(n^2) solution, based on youtube video and solution.
+    #
+    # fill dp array with 1 (shortest LIS). for each position starting
+    # from 2nd item, scan all previous loc, and +1 for any index that
+    # is smaller than current, take max of those and assign to dp[n].
+    # repeat for next pos.
+    #
+    # Essentially for each position, try to extend any previous LIS
+    # and increment its length by one. pick the highest and use it
+    # here.
     #
     # initialize an array (size n) with 1 (smallest subseq is 1)
     # for each element in 2nd position to last  (a[i])

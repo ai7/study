@@ -28,6 +28,21 @@ class Solution:
         # self.connect_right1(root)
         self.connect_right2(root)
 
+    # Note: use the next link we created to traverse a level.
+    #
+    # When we go through elements at level i, we are setting the next
+    # pointer for elements in level i+1. For example, when we are at
+    # root, we are creating the next pointer for our left child.
+    # Therefore, the next level will always already have its next
+    # pointers all set when we finish a level.
+    #
+    # We can use this fact to easily traverse the entire tree in level
+    # order by simply following our next pointers, and set the next
+    # level next pointers.
+    #
+    # since the tree is a perfect tree, we simply save the first node
+    # at each level, and can go down a level by doing x.left.
+
     # iterative O(1) space solution
     # hint: make use of the next link we are creating (in parent)
     # we can assume the tree is a perfect binary tree (full and complete)

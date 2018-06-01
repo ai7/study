@@ -22,8 +22,10 @@ class Solution:
         """
         return self.my_change3(coins, amount)
 
-    # Note: this can be solved either top down with memoization, or
-    # bottom up using a memo/dp array.
+    # Note: use one coin, then recurse on remaining coin type
+    #
+    # this can be solved either top down with memoization, or bottom
+    # up using a memo/dp array.
     #
     # For top down or bottom up, the sub problem is simply the amount
     # less ONE specific coin (not x multiplier [or highest multiplier]

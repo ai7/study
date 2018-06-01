@@ -25,6 +25,11 @@ class Solution:
         """
         return self.kth_smallest2(root, k)
 
+    # Note: iterative in-order walk, when visit kth item, done.
+    #
+    # Alternatively, we can annotate tree with size info (1st pass),
+    # and use rank selection algorithm on result tree as 2nd pass.
+
     # walk the tree in-order, keep a count of node visited
     # when count == k, return item
     #

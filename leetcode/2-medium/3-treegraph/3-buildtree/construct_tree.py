@@ -39,6 +39,18 @@ class Solution:
         # return self.build1(preorder, inorder)
         return self.build2(preorder, inorder)
 
+    # Note: use preorder for Nodes, in-order for recursion.
+    #
+    # The idea is to go through elements in the preorder list, and use
+    # its position in the inorder list (and the remaining left/right
+    # sublist) for the recursion step for left/right subtree.
+    #
+    # since we process left subtree first, the order we process those
+    # items should corresponds exactly to the order they appear in the
+    # preorder list (as we pop them off the list). So when we get to
+    # the right subtree, the top of preorder should be the root of
+    # right subtree.
+
     # short and concise solution from discussion, hmmmm
     # slower, beats 24.86% py3 (but perhaps easier to understand)
     def build2(self, preorder, inorder):

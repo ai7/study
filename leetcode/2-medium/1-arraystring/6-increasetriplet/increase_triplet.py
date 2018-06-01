@@ -21,6 +21,8 @@ class Solution:
 
         return self.triplet2(nums)
 
+    # Note: any value bigger than the 2 min we are tracking?
+    
     # I am dumbfounded after seeing this in the discussions.
     # so obvious yet I can't seem to come up with this.
     #

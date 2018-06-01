@@ -11,7 +11,7 @@
 
 
 class Solution:
-    
+
     def searchMatrix(self, matrix, target):
         """
         :type matrix: List[List[int]]
@@ -20,11 +20,20 @@ class Solution:
         """
         return self.my_search(matrix, target)
 
-    # start from top right, go down if me > k, go left if me < k.
-    # amazon phone screen question.
+    # Note: start from top/right, go left or down.
+    #
+    # start from the top right corner
+    #   go down if > k,
+    #   go left if < k.
+    # this allow us to advance by 1 step in each round.
+    # runtime will be O(m+n).
+    #
+    # we can also start from bottom left, the situation is
+    # symmetrical.
+    #   go right if > k
+    #   go up if < k
 
-    # one can also start from bottom left, the situation is symmetrical,
-    # interesting.
+    # amazon phone screen question.
 
     # 129 / 129 test cases passed.
     # Status: Accepted

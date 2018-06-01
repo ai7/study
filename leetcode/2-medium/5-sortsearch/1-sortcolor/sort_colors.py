@@ -22,17 +22,24 @@ class Solution:
         # self.sort_b(nums)
         self.sort_dutch(nums)
 
+    # Note: break into 3 regions, and swap until mid crosses high.
+    #
+    # Kind of like quicksort partitioning, where we are growing
+    # respective regions.
+    #
+    # break array into low, mid, high sections. mid is the section we
+    # are exploring/growing. low and high are settled regions.
+    #
+    # low/mid starts at 0, high starts at the end. repeat until mid
+    # crosses high:
+    #   if 0: swap a[Lo] and a[Mid]; Lo++; Mid++  (item < mid)
+    #   if 2: swap a[Mid] and a[Hi]; Hi–-  (item > mid)
+    #   if 1: just advance mid: Mid++  (item == mid)
+
     # 87 / 87 test cases passed.
     # Status: Accepted
     # Runtime: 36 ms
     #
-    # break array into low, mid, high sections. mid is the section we are
-    # exploring. low and high are settled regions.
-    #
-    # repeat until mid crosses high
-    #   0: swap a[Lo] and a[Mid]; Lo++; Mid++
-    #   1: Mid++
-    #   2: swap a[Mid] and a[Hi]; Hi–
     def sort_dutch(self, A):
 
         def swap(i, j):
@@ -48,7 +55,7 @@ class Solution:
                 mid += 1
             elif A[mid] == 2:  # item > middle
                 swap(mid, high)  # swap with high (high--)
-                high -= 1
+                high -= 1  # mid remains same, since it has new item from high.
             else:
                 mid += 1
 

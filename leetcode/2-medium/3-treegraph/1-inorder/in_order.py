@@ -16,6 +16,8 @@
 
 
 class Solution:
+
+    # Note: for iterative, remember to use a stack
     
     def inorderTraversal(self, root):
         """

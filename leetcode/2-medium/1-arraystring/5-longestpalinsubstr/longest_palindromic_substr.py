@@ -21,9 +21,12 @@ class Solution:
             return s
         return self.longest2(s)
 
-    # came up with this after looking at the hints.. expand around center
-    # for each pos, there are 2 cases: (i, i), and (i, i+1). (even/odd length palindrome)
+    # Note: try to grow 2 palindrome using each pos as center.
     #
+    # for each pos, there are 2 cases: (i, i) for odd length
+    # palindrome, and (i, i+1) for even length palindrome.
+
+    # came up with this after looking at the hints.. expand around center
     # 94 / 94 test cases passed.
     # Status: Accepted
     # Runtime: 1004 ms (beats 63.56% py3)

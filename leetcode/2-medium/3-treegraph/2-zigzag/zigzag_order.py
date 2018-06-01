@@ -19,6 +19,17 @@ import collections
 
 class Solution:
 
+    # Note: create level arrays, then reverse every other array.
+    #
+    # Can also do this using a BFS walk of tree. The important thing
+    # is to remember to process all elements in queue in each round.
+    # This corresponds to one level in the tree. The trick is to
+    # remember that while we process a node, we are also adding more
+    # data to the queue at the same time.
+    #
+    # This can be easily done with a for loop with the initial size of
+    # the queue before more elements are added.
+    
     # 33 / 33 test cases passed.
     # Status: Accepted (on first submit, yeah)
     # Runtime: 40 ms (beats 98.04% of py3)

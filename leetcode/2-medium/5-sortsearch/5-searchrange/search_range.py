@@ -22,8 +22,25 @@ class Solution:
         """
         return self.my_search2b(nums, target)
 
-    # use 2 binary search to find begin/end range, hmmmm.
+    # Note: use 2 binary search to find begin/end point.
     #
+    # The binary search is not quite symmetrical.
+    # For left point
+    #   if A[m] >= k, drop high to mid (not mid-1)
+    #   if A[m] < k, raise low to mid+1
+    # For right point:
+    #   if A[m] <=k, raise low to mid
+    #   if A[m] > k, drop high to mid-1
+    #
+    # also remember to check if item found after search left point,
+    # since we did not explicitly check equality, but rather >=.
+    #
+    # The two endpoint can also be done via bisect_left() and bisect()
+    #   lo = bisect.bisect_left(A, k)
+    #   hi = bisect.bisect(A, k) - 1
+    # remember bisect returns where to insert item, so for right edge
+    # it will point to beyond last element of array, so need -1.
+
     # 88 / 88 test cases passed.
     # Status: Accepted
     # Runtime: 40 ms (beat 99.63% of py3)
@@ -45,6 +62,7 @@ class Solution:
                 j = m  # drop high to same as mid (since >=, not >)
             else:  # v < k
                 i = m + 1  # raise low to mid (+1, since <, not <=)
+
         # since we didn't check for equality in loop, we need to do it afterwards
         if A[i] == k:  # i points to starting point, if match
             retval[0] = i
