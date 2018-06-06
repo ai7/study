@@ -11,8 +11,12 @@ import unittest
 
 class Solution:
 
-    # finally one that I worked out myself, hehe
+    # Note: do binary search and check if m is same as last one.
     #
+    # We actually need to check that the current m is not the same as
+    # the last one, as we may get into a situation where m is not
+    # changing anymore in the next round.
+
     # 1017 / 1017 test cases passed.
     # Status: Accepted
     # Runtime: 64 ms (beats 80.49% py3)
