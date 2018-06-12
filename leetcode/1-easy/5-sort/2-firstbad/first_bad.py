@@ -42,7 +42,7 @@ class Solution(object):
             else:
                 return 0
         else:
-            m = int((s + e)/2)
+            m = (s + e) // 2
             if isBadVersion(m):  # middle is bad, search left half
                 left = self.search(s, m)
                 if not left:  # nothing in left, so m is first one

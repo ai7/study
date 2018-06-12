@@ -31,6 +31,19 @@ class Solution:
     #   swap with last non-zero-seq
     #   non-zero-seq++
     #
+    # again feels similar to qs partition with slow/fast pointer. we
+    # have a frontier, and a smaller set at the beginning. Whenever we
+    # see a non-zero in the frontier, we swap it with end of smaller
+    # set.
+    #
+    # I think the trick is, since we are growing a set at the
+    # beginning, we need to ignore any 0 element, and process non zero
+    # elements. (this is slightly different from the intuition that we
+    # should swap zero element toward the end of the array). I think
+    # if we think carefully about what we are growing, we should be
+    # able to figure out what we need to ignore/process at the
+    # frontier.
+
     # it's miraculous that this works! it's also a tiny bit simpler
     # than sol2. it's obvious that the non-zero-seq will all be >0,
     # it's less obvious that any 0 in between would've been

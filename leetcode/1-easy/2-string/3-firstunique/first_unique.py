@@ -14,7 +14,7 @@ class Solution:
     # Note: build histogram, scan string and return first char with cnt==1.
     #
     # The problem is to return the first char in string that have only
-    # one occurance in the whole string. (not returning b in
+    # one occurrence in the whole string. (not returning b in
     # 'aaaaab...'). So to solve this we need 2 pass. One to build
     # histogram, and 2nd pass iterate through the string and return
     # the first char having counter value of 1.
