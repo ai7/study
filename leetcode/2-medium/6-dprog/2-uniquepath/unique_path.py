@@ -17,29 +17,53 @@ import unittest
 
 
 class Solution:
-    
+
     def uniquePaths(self, m, n):
         """
         :type m: int
         :type n: int
         :rtype: int
         """
-        return self.my_path(m, n)
+        return self.my_path3(m, n)
 
-    # for bottom up dp, we can build a mxn matrix (only need half),
-    # or, we can recognize that f(a, b) = f(a-1, b) + f(a, b-1),
-    # and build up the answer that way...
+    # Note: standard memorization, or dp with mxn | 2xn array
+    #
+    # We have basically f(a, b) = f(a-1, b) + f(a, b-1).
+    #
+    # Standard memo solution is easy to write.
+    #
+    # For DP, we can start with full mxn matrix, initialize first row
+    # and first column to 1. Then basically compute matrix and return
+    # bottom right corner value.
+    #
+    # An improvement is we only need the last 2 rows for doing this
+    # calculation, so instead of keeping the full matrix, we just keep
+    # the last 2 rows.
 
-    # need to read and understand this
-    # https://leetcode.com/problems/unique-paths/discuss/22954/0ms-5-lines-DP-Solution-in-C++-with-Explanations
-
+    # simple dp solution using full m x n matrix (down x right)
     def my_path2(self, right, down):
 
-        # size right x down matrix
-        pass
+        # initialize matrix with value 1
+        M = [[1 for r in range(right)] for c in range(down)]
 
+        for i in range(1, down):
+            for j in range(1, right):
+                M[i][j] = M[i-1][j] + M[i][j-1]
 
-    # Note: standard memorization
+        return M[down-1][right-1]
+
+    # optimized with just 2 arrays
+    def my_path3(self, right, down):
+
+        prev = [1] * right
+        curr = [1] * right
+
+        for i in range(1, down):  # for each row from second+
+            prev, curr = curr, prev  # swap so curr is ready for input
+            for j in range(1, right):  # for each col from second+
+                curr[j] = prev[j] + curr[j-1]
+
+        return curr[right-1]  # return last element of current row
 
     # 62 / 62 test cases passed.
     # Status: Accepted (on 1st submit!)
@@ -65,11 +89,11 @@ class TestPath(unittest.TestCase):
         self.sol = Solution()
 
     def test1(self):
-        print(self.sol.uniquePaths(1, 3))
-        print(self.sol.uniquePaths(2, 3))
-        print(self.sol.uniquePaths(3, 3))
-        print(self.sol.uniquePaths(4, 3))
-        print(self.sol.uniquePaths(4, 4))
+        self.assertEqual(self.sol.uniquePaths(1, 3), 1)
+        self.assertEqual(self.sol.uniquePaths(2, 3), 3)
+        self.assertEqual(self.sol.uniquePaths(3, 3), 6)
+        self.assertEqual(self.sol.uniquePaths(4, 3), 10)
+        self.assertEqual(self.sol.uniquePaths(4, 4), 20)
 
 
 if __name__ == '__main__':

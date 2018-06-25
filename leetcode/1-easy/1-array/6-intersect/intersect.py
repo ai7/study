@@ -5,10 +5,19 @@
 #
 # Given two arrays, write a function to compute their intersection.
 
+import collections
 import unittest
 
 
 class Solution:
+
+    def intersect(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        return self.my_inter3(nums1, nums2)
 
     # Note: sort 2 both array, then scan both and add common elements.
     #
@@ -16,13 +25,13 @@ class Solution:
     #   if i == j: add to intersection
     #   while i < j: i++
     #   while i > j: j++
-    
-    def intersect(self, nums1, nums2):
-        """
-        :type nums1: List[int]
-        :type nums2: List[int]
-        :rtype: List[int]
-        """
+    #
+    # Alternatively, build counter from A, for each in B, if in
+    # counter and counter > 0, add to res and decrease corresponding
+    # counter.
+
+    def my_inter(self, nums1, nums2):
+
         if not nums1 or not nums2:
             return []
         nums1.sort()
@@ -49,6 +58,23 @@ class Solution:
                     j += 1
 
         return A
+
+    # using counter methods
+    def my_inter2(self, A, B):
+        a = collections.Counter(A)
+        b = collections.Counter(B)
+        return (a & b).elements()
+
+    def my_inter3(self, A, B):
+        a = collections.defaultdict(int)
+        for x in A:
+            a[x] += 1
+        res = []
+        for x in B:
+            if x in a and a[x] > 0:
+                res.append(x)
+                a[x] -= 1
+        return res
 
 
 class TestIntersection(unittest.TestCase):

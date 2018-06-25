@@ -38,7 +38,7 @@ class Solution:
             for i in range(len(remain)):  # for each char in char list
                 v = remain[i]
                 data_next = remain[:i] + remain[i + 1:]  # copy list except pos i
-                backtrack(path + [v], data_next)
+                backtrack(path + [v], data_next)  # use + so we create new list
 
         res = []
         if nums:

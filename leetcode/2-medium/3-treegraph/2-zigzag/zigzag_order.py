@@ -43,22 +43,24 @@ class Solution:
         return self.zigzag_recursive(root)
         # return self.zigzag_iterative(root)
 
-    def zigzag_recursive(self, x):
+    def zigzag_recursive(self, root):
+
+        # pre-order traversal (in-order also works but pre is probably cleaner)
+        def walk(x, n):
+            if x:
+                if n >= len(res):
+                    res.append([])
+                res[n].append(x.val)
+                walk(x.left, n+1)
+                walk(x.right, n+1)
+
         res = []
-        self.walk(x, 0, res)
+        walk(root, 0)
         for i in range(len(res)):  # reverse every other row of data
             if i % 2:
                 res[i].reverse()
-        return res
 
-    # pre-order traversal (in-order also works but pre is probably cleaner)
-    def walk(self, x, n, A):
-        if x:
-            if len(A) < n+1:
-                A.append([])
-            A[n].append(x.val)
-            self.walk(x.left, n+1, A)
-            self.walk(x.right, n+1, A)
+        return res
 
     # iterative version, BFS using queue, from discussion
     # good way to see how to process trees in level order

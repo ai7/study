@@ -25,7 +25,7 @@ import unittest
 # Runtime: 104 ms (beats 90.34% of py3)
 class RandomizedSet:
 
-    # Note: hashtable of value to array index, ise array for get random
+    # Note: hashtable of value to array index, use array for get random
     #
     # Use a hashtable to store element and its index in array. Use the
     # array for size and get random() operation.
