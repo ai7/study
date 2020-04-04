@@ -1,0 +1,11 @@
+/* Head First Design Pattern */
+
+package hfdp.c01.Strategy;
+
+public class a_Problem1 {
+
+   public static void main(String[] args) 
+   {
+   }
+
+};
