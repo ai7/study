@@ -30,3 +30,8 @@ dependencies {
 
 // Define the main class for the application
 mainClassName = 'hfdp.App'
+
+compileJava {
+    // observer/etc was deprecated in java9
+//    options.compilerArgs << '-Xlint:deprecation'
+}

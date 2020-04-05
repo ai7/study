@@ -8,3 +8,7 @@ build
 gradle
 gradlew
 gradlew.bat
+
+# ignore intellij project files
+.idea
+out

@@ -3,14 +3,12 @@ package hfdp.c01.Strategy;
 public class MallardDuck extends Duck {
 
     public MallardDuck() {
-	quackBehavior = new Quack();
-	flyBehavior = new FlyWithWings();
-    }
-    
-    @Override
-    public void display() {
-	// TODO Auto-generated method stub
-	System.out.println("I'm a real Mallard duck");
+        quackBehavior = new Quack();
+        flyBehavior = new FlyWithWings();
     }
 
+    @Override
+    public void display() {
+        System.out.println("I'm a real Mallard duck");
+    }
 }
