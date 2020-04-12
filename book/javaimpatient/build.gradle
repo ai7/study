@@ -12,6 +12,9 @@ plugins {
 
     // Apply the application plugin to add support for building an application
     id 'application'
+
+    // support lombok
+    id "io.freefair.lombok" version "5.0.0-rc6"
 }
 
 repositories {
@@ -26,6 +29,9 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+
+    // Use Mockito in testing
+    testCompile "org.mockito:mockito-core:2.+"
 
     // opencsv, ch02.Exercise13
     compile 'com.opencsv:opencsv:4.5'

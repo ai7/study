@@ -4,7 +4,15 @@
 # Ignore Gradle build output directory
 build
 
+# extra gradle wrapper stuff to ignore
+gradle
+gradlew
+gradlew.bat
+
 # intellij stuff
 out
 .idea
 javaimpatient.iml
+
+# lombok config file
+lombok.config
