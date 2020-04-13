@@ -18,7 +18,7 @@
 //       if don't want to ask for rows, have to use an ArrayList and
 //       convert back to int[][]?
 
-package ch01;
+package ch01.ex14;
 
 import java.util.ArrayList;
 import java.util.Arrays;

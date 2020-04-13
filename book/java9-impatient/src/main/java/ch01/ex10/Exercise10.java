@@ -4,7 +4,7 @@
 // Note: this is basically itoa() for base64. which Long.toString()
 //       can also handle given a radix 2-36, interesting.
 
-package ch01;
+package ch01.ex10;
 
 import java.util.Random;
 

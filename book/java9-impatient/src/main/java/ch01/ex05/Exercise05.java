@@ -3,7 +3,7 @@
 
 // Note: left bits are dropped?
 
-package ch01;
+package ch01.ex05;
 
 public class Exercise05 {
     public static void main(String[] args) {

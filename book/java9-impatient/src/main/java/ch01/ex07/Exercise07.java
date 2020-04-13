@@ -7,7 +7,7 @@
 //       larger (as unsigned). Division was a bit tricky. Cast to long
 //       and then calculated.
 
-package ch01;
+package ch01.ex07;
 
 import util.Input;
 

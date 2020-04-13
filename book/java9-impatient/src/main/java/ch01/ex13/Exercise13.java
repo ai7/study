@@ -7,7 +7,7 @@
 // Note: pick a random element and swap with end of array, repeat for
 //       size n-1.
 
-package ch01;
+package ch01.ex13;
 
 import java.util.Arrays;
 import java.util.Random;

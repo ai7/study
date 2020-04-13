@@ -3,7 +3,7 @@
 
 // Note: carefully crafted if statements. Much simpler if Math.max(),
 
-package ch01;
+package ch01.ex03;
 
 import util.Input;
 

@@ -4,7 +4,7 @@
 // Note: iterate through string, print out any char > 127 using
 //       printf() %c and %x.
 
-package ch01;
+package ch01.ex11;
 
 import util.Input;
 

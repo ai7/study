@@ -6,7 +6,7 @@
 //             different object reference, such as when
 //             .toLowerCase() is called on a string.
 
-package ch01;
+package ch01.ex09;
 
 public class Exercise09 {
     public static void main(String[] args) {

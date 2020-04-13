@@ -3,7 +3,7 @@
 
 // Note: standard factorial code.
 
-package ch01;
+package ch01.ex06;
 
 import java.math.BigInteger;
 

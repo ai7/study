@@ -1,4 +1,4 @@
-package ch01;
+package ch01.ex14;
 
 import static org.junit.Assert.assertTrue;
 

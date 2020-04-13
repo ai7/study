@@ -3,7 +3,7 @@
 
 // Note: just use vararg after 1st parameter, trivial.
 
-package ch01;
+package ch01.ex16;
 
 public class Exercise16 {
 

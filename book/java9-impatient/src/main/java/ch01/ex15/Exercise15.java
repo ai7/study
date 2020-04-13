@@ -7,7 +7,7 @@
 //       actually create empty element, obviously. We need to do it
 //       ourselves.
 
-package ch01;
+package ch01.ex15;
 
 import java.util.ArrayList;
 

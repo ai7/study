@@ -4,7 +4,7 @@
 // Note: use Math.nextUp() Math.nextDown() from both ends.
 //       print value using %s.
 
-package ch01;
+package ch01.ex04;
 
 public class Exercise04 {
 

@@ -5,7 +5,7 @@
 // Note: use correct printf() formatter for oct, hex.
 //       Integer.toBinaryString() for binary.
 
-package ch01;
+package ch01.ex01;
 
 import util.Input;
 

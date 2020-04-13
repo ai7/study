@@ -5,7 +5,7 @@
 // Note: If not using floorMod(), need to use % twice (with add) to
 //       overcome the possible negative values.
 
-package ch01;
+package ch01.ex02;
 
 import util.Input;
 

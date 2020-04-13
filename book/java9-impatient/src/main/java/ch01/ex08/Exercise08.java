@@ -3,7 +3,7 @@
 
 // Note: split sentense by whitespace using regex?
 
-package ch01;
+package ch01.ex08;
 
 import java.util.Arrays;
 
