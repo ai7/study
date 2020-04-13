@@ -12,7 +12,7 @@
 
 package ch02.ex05;
 
-public class Exercise05 {
+public class Answer {
 
     /**
      * A point in the plane.

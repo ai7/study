@@ -8,7 +8,7 @@ package ch02.ex15;
 
 import java.util.ArrayList;
 
-public class Exercise15 {
+public class Answer {
 
     public static class Invoice {
         private ArrayList<Item> items = new ArrayList<>();

@@ -13,7 +13,7 @@ package ch02.ex10;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Exercise10 {
+public class Answer {
 
     static class RandomNumbers {
 

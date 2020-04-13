@@ -18,7 +18,7 @@ package ch02.ex17;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Exercise17 {
+public class Answer {
 
     public static class Queue {
         List<Node> elements = new LinkedList<>();

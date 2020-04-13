@@ -23,7 +23,7 @@ package ch02.ex14;
 
 import java.util.ArrayList;
 
-public class Exercise14 {
+public class Answer {
 
     public static class Network {
         public class Member {

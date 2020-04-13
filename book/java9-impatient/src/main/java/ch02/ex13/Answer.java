@@ -20,7 +20,7 @@ import java.util.Map;
 
 import com.opencsv.CSVReaderHeaderAware;
 
-public class Exercise13 {
+public class Answer {
 
     public static void main(String[] args) throws IOException {
         if (args.length <= 0) {

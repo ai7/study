@@ -10,5 +10,5 @@
 
 package ch02.ex03;
 
-public class Exercise03 {
+public class Answer {
 }

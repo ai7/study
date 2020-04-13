@@ -14,7 +14,7 @@ package ch02.ex16;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Exercise16 {
+public class Answer {
 
     public static class Queue {
         List<Node> elements = new ArrayList<>();

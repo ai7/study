@@ -2,12 +2,12 @@ package ch02.ex09;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-import org.junit.Before;
+
 import org.junit.Test;
 
-public class Ex09Test {
+public class AnswerTest {
 
-    Exercise09.Car myvolt = new Exercise09.Car(37, 9.3);
+    Answer.Car myvolt = new Answer.Car(37, 9.3);
 
     @Test
     public void test_AddGas() {

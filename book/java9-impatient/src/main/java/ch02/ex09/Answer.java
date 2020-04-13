@@ -14,7 +14,7 @@
 
 package ch02.ex09;
 
-public class Exercise09 {
+public class Answer {
 
     public static class Car {
         private final double mpg;  // fuel efficiency, miles/gallon

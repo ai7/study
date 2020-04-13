@@ -6,7 +6,7 @@
 
 package ch02.ex06;
 
-public class Exercise06 {
+public class Answer {
 
     public static class Point {
         private double x;  // not final, need to modify

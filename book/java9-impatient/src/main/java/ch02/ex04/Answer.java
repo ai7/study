@@ -18,7 +18,7 @@ package ch02.ex04;
 
 // import org.omg.CORBA.IntHolder;  // removed in JDK11
 
-public class Exercise04 {
+public class Answer {
 
     static class IntHolder {
         int value;  // public, no getter/setter

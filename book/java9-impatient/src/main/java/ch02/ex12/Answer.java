@@ -22,7 +22,7 @@
 // package ch01.sec01;  // for exercise
 package ch02.ex12;           // for gradle
 
-public class Exercise12 {
+public class Answer {
 
     public static void main(String[] args) {
         System.out.println("Hello, world.");

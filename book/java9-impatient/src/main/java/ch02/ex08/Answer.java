@@ -8,7 +8,7 @@
 
 package ch02.ex08;
 
-public class Exercise08 {
+public class Answer {
 
     public static class Point {  // manually
         private double x;  // manually
