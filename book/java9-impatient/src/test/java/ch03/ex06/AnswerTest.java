@@ -9,7 +9,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.math.BigInteger;
 
 @RunWith(MockitoJUnitRunner.class)
-public class SolutionTest {
+public class AnswerTest {
 
     @Test
     public void test_SquareSequence() {

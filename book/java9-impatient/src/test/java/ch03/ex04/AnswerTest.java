@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-public class SolutionTest {
+public class AnswerTest {
 
     @Test
     public void test_IntSequence() {

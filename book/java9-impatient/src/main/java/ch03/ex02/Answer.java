@@ -6,7 +6,7 @@ package ch03.ex02;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Solution
+public class Answer
 {
     // compute the average of a list of measurable objects
     public static Measurable largest(Measurable[] objects) {

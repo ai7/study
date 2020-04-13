@@ -1,6 +1,6 @@
 package ch03.ex01;
 
-public class Solution
+public class Answer
 {
     // compute the average of a list of measurable objects
     public static double average(Measurable[] objects) {

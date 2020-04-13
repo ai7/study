@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-public class SolutionTest {
+public class AnswerTest {
 
     private Employee[] workers = new Employee[] {
             new Employee("John Doe", 100),
@@ -21,7 +21,7 @@ public class SolutionTest {
     @Test
     public void test_Average() {
         // act
-        Measurable largest = Solution.largest(workers);
+        Measurable largest = Answer.largest(workers);
         // verify
         Employee e = (Employee) largest;
         System.out.println("Largest salary: " + e.getName());

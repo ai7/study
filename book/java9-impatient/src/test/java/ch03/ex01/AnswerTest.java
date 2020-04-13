@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-public class SolutionTest {
+public class AnswerTest {
 
     double[] salaries = { 100, 101, 103, 105 };
     private Employee[] workers;
@@ -28,7 +28,7 @@ public class SolutionTest {
     @Test
     public void test_Average() {
         // act
-        double average = Solution.average(workers);
+        double average = Answer.average(workers);
         // verify
         assertEquals(Arrays.stream(salaries)
                         .average()

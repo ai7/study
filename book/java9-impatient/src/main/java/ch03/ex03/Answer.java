@@ -8,7 +8,7 @@ package ch03.ex03;
 import javax.imageio.stream.ImageOutputStream;
 import java.util.Scanner;
 
-public class Solution {
+public class Answer {
     public static void test() {
         String x;
         Scanner y;
