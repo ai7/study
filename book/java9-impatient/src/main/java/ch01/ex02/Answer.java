@@ -9,7 +9,7 @@ package ch01.ex02;
 
 import util.Input;
 
-class Exercise02 {
+class Answer {
 
     public static void main(String[] args) {
         int v = Input.readInt("Enter an angle: ");

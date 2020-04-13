@@ -4,7 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class Ex14Test {
+public class AnswerTest {
 
     @Test
     public void testPerfectMatrix() {
@@ -14,6 +14,6 @@ public class Ex14Test {
                 {9, 6, 7, 12},
                 {4, 15, 14, 1}
         };
-        assertTrue(Exercise14.checkMatrix(M));
+        assertTrue(Answer.checkMatrix(M));
     }
 }

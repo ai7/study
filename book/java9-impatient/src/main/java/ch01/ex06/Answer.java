@@ -9,7 +9,7 @@ import java.math.BigInteger;
 
 import util.Input;
 
-public class Exercise06 {
+public class Answer {
 
     static BigInteger factorial(int n) {
         BigInteger v = BigInteger.valueOf(1);

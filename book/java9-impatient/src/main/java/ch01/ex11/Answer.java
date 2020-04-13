@@ -8,7 +8,7 @@ package ch01.ex11;
 
 import util.Input;
 
-public class Exercise11 {
+public class Answer {
 
     public static void main(String[] args) {
         String line = Input.readLine("Input line: ");

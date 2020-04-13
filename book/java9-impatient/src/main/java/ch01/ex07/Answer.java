@@ -11,7 +11,7 @@ package ch01.ex07;
 
 import util.Input;
 
-public class Exercise07 {
+public class Answer {
 
     public static void main(String[] args) {
         int[] A = Input.readInts(2);

@@ -12,7 +12,7 @@ package ch01.ex13;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Exercise13 {
+public class Answer {
 
     static Random rand = new Random();
 

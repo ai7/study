@@ -25,7 +25,7 @@ import java.util.Arrays;
 
 import util.Input;
 
-public class Exercise14 {
+public class Answer {
 
     static boolean checkRow(int[][] M, int v) {
         for (int r = 0; r < M.length; r++) {  // also: "for (int[] R: M)"

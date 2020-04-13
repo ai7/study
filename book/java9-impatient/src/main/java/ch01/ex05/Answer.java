@@ -5,7 +5,7 @@
 
 package ch01.ex05;
 
-public class Exercise05 {
+public class Answer {
     public static void main(String[] args) {
         // left bits are dropped?
         int x = (int) 1234567890234.0;

@@ -6,7 +6,7 @@
 
 package ch01.ex04;
 
-public class Exercise04 {
+public class Answer {
 
     // smallest positive double
     static double smallestDouble() {

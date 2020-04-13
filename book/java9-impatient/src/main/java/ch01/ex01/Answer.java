@@ -9,7 +9,7 @@ package ch01.ex01;
 
 import util.Input;
 
-class Exercise01 {
+class Answer {
 
     public static void main(String[] args) {
         int v = Input.readInt("Enter a number: ");

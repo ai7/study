@@ -7,7 +7,7 @@ package ch01.ex03;
 
 import util.Input;
 
-public class Exercise03 {
+public class Answer {
 
     // using only conditional operators
     static int threeMax(int a, int b, int c) {

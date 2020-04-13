@@ -5,7 +5,7 @@
 
 package ch01.ex16;
 
-public class Exercise16 {
+public class Answer {
 
     static double average(double x, double... values) {
         for (double v: values) {

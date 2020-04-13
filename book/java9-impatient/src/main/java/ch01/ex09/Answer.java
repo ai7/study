@@ -8,7 +8,7 @@
 
 package ch01.ex09;
 
-public class Exercise09 {
+public class Answer {
     public static void main(String[] args) {
         // string operation generates a new string, which have
         // content same as another string, but different address.

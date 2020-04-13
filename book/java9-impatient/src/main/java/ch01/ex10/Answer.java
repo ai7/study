@@ -8,7 +8,7 @@ package ch01.ex10;
 
 import java.util.Random;
 
-public class Exercise10 {
+public class Answer {
 
     // base36 alphabet
     static String alphabet = "0123456789abcdefghijklmnopqrstuvwxyz";

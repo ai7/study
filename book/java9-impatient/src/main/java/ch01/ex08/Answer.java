@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 import util.Input;
 
-public class Exercise08 {
+public class Answer {
     public static void main(String[] args) {
         String line = Input.readLine("Enter some text: ");
         String[] A = line.split("\\s+");

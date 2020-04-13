@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import util.Input;
 
-public class Exercise15 {
+public class Answer {
 
     static ArrayList<ArrayList<Integer>> pascalTriangle(int n) {
         ArrayList<ArrayList<Integer>> M = new ArrayList<>();

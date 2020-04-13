@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 import java.util.Random;
 
-public class Ex03Test {
+public class AnswerTest {
 
     private static final Random generator = new Random();
 
@@ -16,8 +16,8 @@ public class Ex03Test {
             int a = generator.nextInt();
             int b = generator.nextInt();
             int c = generator.nextInt();
-            assertEquals(Exercise03.threeMax(a, b, c),
-                    Exercise03.threeMax2(a, b, c));
+            assertEquals(Answer.threeMax(a, b, c),
+                    Answer.threeMax2(a, b, c));
         }
     }
 }
