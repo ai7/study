@@ -20,14 +20,6 @@ package ch02.ex04;
 
 public class Answer {
 
-    static class IntHolder {
-        int value;  // public, no getter/setter
-        IntHolder() {}
-        IntHolder(int initial) {
-            value = initial;
-        }
-    }
-
     public static void main(String[] args) {
         IntHolder a = new IntHolder(12);
         IntHolder b = new IntHolder(32);

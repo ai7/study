@@ -12,7 +12,7 @@ import java.time.LocalDate;
 
 public class Answer {
 
-    private static final String[] LABEL = {
+    static final String[] LABEL = {
        "Sun",
        "Mon",
        "Tue",
@@ -34,11 +34,11 @@ public class Answer {
         }
     }
 
-    private static void printHeader() {
+    static void printHeader() {
         System.out.println(String.join(" ", LABEL));
     }
 
-    private static void printMonth(int year, int month) {
+    static void printMonth(int year, int month) {
         // get the first day of the month
         LocalDate start = LocalDate.of(year, month, 1);
         // print header

@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class AnswerTest {
 
-    Answer.Car myvolt = new Answer.Car(37, 9.3);
+    Car myvolt = new Car(37, 9.3);
 
     @Test
     public void test_AddGas() {

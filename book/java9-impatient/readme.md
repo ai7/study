@@ -8,6 +8,16 @@ This directory contains exercises I did for the
 ## Build
 
 Project can be build using `gradle`, using standard project layout.
+- src/main/java
+- src/test/java
+
+Each chapter and exercise are in unique packages. This way, class
+structure for each exercise are easily visible in IDE.
+
+- ch01/ex01/Answer.java
+
+In answer, static methods are using default visibility, so they are
+easily tested.
 
 ## Intellij
 
