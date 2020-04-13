@@ -9,7 +9,7 @@
 //   For Random it is a mutator, since the state/seed is updated which
 //   is a member variable.
 
-package ch02;
+package ch02.ex02;
 
 public class Exercise02 {
 }

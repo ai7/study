@@ -4,7 +4,7 @@
 
 // Note: pretty straightforward.
 
-package ch02;
+package ch02.ex15;
 
 import java.util.ArrayList;
 

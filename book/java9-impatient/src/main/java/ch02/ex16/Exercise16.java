@@ -9,7 +9,7 @@
 //
 //   return this in add() and remove(), chaining is fun!
 
-package ch02;
+package ch02.ex16;
 
 import java.util.ArrayList;
 import java.util.List;

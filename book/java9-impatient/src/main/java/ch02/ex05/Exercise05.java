@@ -10,7 +10,7 @@
 //
 // Should set p to a point with coordinates (2, 3.5)
 
-package ch02;
+package ch02.ex05;
 
 public class Exercise05 {
 

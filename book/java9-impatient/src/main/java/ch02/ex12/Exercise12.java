@@ -19,8 +19,8 @@
 //     javac -d . Exercise12.java
 //       this produces the required directory structure "ch01/sec02/Exercise12.class"
 
-package ch01.sec01;  // for exercise
-// package ch02;           // for gradle
+// package ch01.sec01;  // for exercise
+package ch02.ex12;           // for gradle
 
 public class Exercise12 {
 

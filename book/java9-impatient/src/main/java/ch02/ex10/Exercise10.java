@@ -8,7 +8,7 @@
 //   use the already defined nextInt() to return an index between
 //   0 to A.length - 1.
 
-package ch02;
+package ch02.ex10;
 
 import java.util.ArrayList;
 import java.util.Random;

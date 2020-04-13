@@ -3,7 +3,7 @@
 
 // Added for Exercise05.
 
-package ch02;
+package ch02.ex07;
 
 public class Exercise07 {
 }

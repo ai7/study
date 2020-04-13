@@ -12,7 +12,7 @@
 // Note:
 //   added to gradle with: compile 'com.opencsv:opencsv:4.5'
 
-package ch02;
+package ch02.ex13;
 
 import java.io.FileReader;
 import java.io.IOException;

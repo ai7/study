@@ -14,7 +14,7 @@
 //
 //   Cannot swap 2 Integer, as Integer is immutable.
 
-package ch02;
+package ch02.ex04;
 
 // import org.omg.CORBA.IntHolder;  // removed in JDK11
 

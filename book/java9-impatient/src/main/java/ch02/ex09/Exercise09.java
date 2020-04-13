@@ -12,7 +12,7 @@
 //   only tricky part is cap fuel capacity during add fuel, and cap
 //   distance based on available fuel at travel.
 
-package ch02;
+package ch02.ex09;
 
 public class Exercise09 {
 

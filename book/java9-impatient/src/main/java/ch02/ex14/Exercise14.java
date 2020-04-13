@@ -19,7 +19,7 @@
 //     public ch02.Exercise14$Network$Member(ch02.Exercise14$Network, java.lang.String);
 //   }
 
-package ch02;
+package ch02.ex14;
 
 import java.util.ArrayList;
 

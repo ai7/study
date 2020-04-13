@@ -1,4 +1,4 @@
-package ch02;
+package ch02.ex09;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;

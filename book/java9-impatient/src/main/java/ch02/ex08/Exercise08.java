@@ -6,7 +6,7 @@
 //   enter class, and instance variables first, then cmd-n, can select
 //   constructors, getters, setters, toString, etc.
 
-package ch02;
+package ch02.ex08;
 
 public class Exercise08 {
 

@@ -4,7 +4,7 @@
 // Note:
 //   just set instance variables and return this.
 
-package ch02;
+package ch02.ex06;
 
 public class Exercise06 {
 

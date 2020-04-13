@@ -13,7 +13,7 @@
 
 // done with chapter2 exercise! 4/13/2019, 6:09pm.
 
-package ch02;
+package ch02.ex17;
 
 import java.util.LinkedList;
 import java.util.List;
