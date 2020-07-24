@@ -12,6 +12,15 @@ plugins {
 
     // Apply the application plugin to add support for building a CLI application.
     id 'application'
+
+    // https://plugins.gradle.org/plugin/io.freefair.lombok
+    id "io.freefair.lombok" version "5.1.0"
+
+    // https://docs.gradle.org/current/userguide/jacoco_plugin.html
+    id 'jacoco'
+
+    // https://plugins.gradle.org/plugin/com.github.spotbugs
+    id "com.github.spotbugs" version "4.4.4"
 }
 
 repositories {
@@ -23,6 +32,9 @@ repositories {
 dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:29.0-jre'
+
+    // https://mvnrepository.com/artifact/com.google.inject/guice
+    implementation group: 'com.google.inject', name: 'guice', version: '4.2.3'
 
     // Use JUnit Jupiter API for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
@@ -39,4 +51,22 @@ application {
 test {
     // Use junit platform for unit tests
     useJUnitPlatform()
+    finalizedBy jacocoTestReport  // report is always generated after tests run
 }
+
+jacocoTestReport {
+    dependsOn test  // tests are required to run before generating the report
+}
+
+// Example to configure HTML report
+spotbugsMain {
+    reports {
+        html {
+            enabled = true
+            destination = file("$buildDir/reports/spotbugs/main/spotbugs.html")
+            stylesheet = 'fancy-hist.xsl'
+        }
+    }
+}
+
+generateLombokConfig.enabled = false
